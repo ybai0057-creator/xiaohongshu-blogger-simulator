@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小红书博主模拟器</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section id="homeScreen" class="screen home-screen">
+      <div class="cover-badge">📱 7 天养号挑战</div>
+      <h1>小红书博主模拟器</h1>
+      <p class="subtitle">从 0 粉开始，你能成为爆款博主吗？</p>
+      <p class="intro">
+        你是一名刚开始做小红书的新人博主。接下来 7 天，你要决定每天发什么内容、怎么经营账号、怎么平衡流量、粉丝、预算和创作压力。
+      </p>
+
+      <div id="lastResult" class="last-result hidden"></div>
+
+      <label class="field-label" for="playerName">你的博主昵称</label>
+      <input id="playerName" class="name-input" type="text" maxlength="12" placeholder="不填就是新人博主">
+
+      <div class="persona-header">
+        <span>选择博主人设</span>
+        <small>每种人设都会改变初始属性</small>
+      </div>
+      <div id="personaList" class="persona-list"></div>
+
+      <button id="startBtn" class="primary-btn">开始经营账号 ✨</button>
+    </section>
+
+    <section id="gameScreen" class="screen game-screen hidden">
+      <header class="game-top">
+        <div>
+          <p id="dayCount" class="day-count"></p>
+          <h2 id="dayTheme"></h2>
+        </div>
+        <div class="player-chip">
+          <span id="headerName"></span>
+          <strong id="headerFans"></strong>
+        </div>
+      </header>
+
+      <article class="story-card">
+        <div class="section-title">今日剧情</div>
+        <h3 id="storyTitle"></h3>
+        <p id="storyText"></p>
+      </article>
+
+      <div id="optionList" class="option-list"></div>
+
+      <section class="stats-panel">
+        <div class="section-title">账号状态</div>
+        <div id="statsGrid" class="stats-grid"></div>
+      </section>
+
+      <section id="resultPanel" class="result-panel hidden">
+        <div class="section-title">发布反馈</div>
+        <h3 id="resultTitle"></h3>
+        <p id="resultDesc"></p>
+        <div id="deltaList" class="delta-list"></div>
+        <div class="comments-box">
+          <h4>今日虚拟评论区 💬</h4>
+          <ul id="commentList"></ul>
+        </div>
+        <button id="nextBtn" class="primary-btn">进入下一天</button>
+      </section>
+    </section>
+
+    <section id="endingScreen" class="screen ending-screen hidden">
+      <div class="report-label">📈 你的小红书账号成长报告</div>
+      <h2 id="endingName"></h2>
+      <p id="endingPlayer" class="ending-player"></p>
+      <p id="endingScore" class="score-pill"></p>
+      <p id="endingDesc" class="ending-desc"></p>
+      <div id="endingStats" class="ending-stats"></div>
+      <div class="share-card">
+        <h3>分享文案</h3>
+        <p id="shareText"></p>
+      </div>
+      <div id="copyHint" class="copy-hint hidden"></div>
+      <div class="ending-actions">
+        <button id="copyBtn" class="primary-btn">复制我的结果</button>
+        <button id="restartBtn" class="secondary-btn">重新开始</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
